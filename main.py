@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 from sklearn.decomposition import PCA
 from sklearn.neural_network import MLPClassifier
-from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import confusion_matrix, classification_report, mean_squared_error
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
