@@ -4,7 +4,7 @@ A machine learning project that implements an Artificial Neural Network (ANN) fo
 
 ## 📋 Overview
 
-This project converts a MATLAB-based lung cancer classification system to Python, implementing:
+This project is a Python-based lung cancer classification, implementing:
 
 -   Data preprocessing and cleaning
 -   Principal Component Analysis (PCA) for feature reduction
@@ -27,7 +27,7 @@ LungCancerANN/
 ├── main.py                 # Main script
 ├── requirements.txt        # Python dependencies
 ├── README.md              # Project documentation
-└── lung-cancerdata.xlsx   # Dataset (not included)
+└── lung-cancerdata.xlsx   # Dataset
 ```
 
 ## 🛠️ Installation
@@ -42,8 +42,8 @@ LungCancerANN/
 1. **Clone or download this repository**
 
     ```bash
-    git clone <repository-url>
-    cd LungCancerANN
+    git clone https://github.com/ImanMrd/Lung-Cancer-classifier.git
+    cd Lung-Cancer-classifier
     ```
 
 2. **Create a virtual environment (recommended)**
@@ -145,31 +145,7 @@ The neural network consists of:
 -   **numpy (≥1.21.0)**: Numerical operations and array handling
 -   **scikit-learn (≥1.0.0)**: Machine learning algorithms (PCA, MLP, preprocessing)
 -   **openpyxl (≥3.0.0)**: Excel file reading support
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-1. **"could not convert string to float" Error**
-
-    - Ensure dataset doesn't contain unexpected string values
-    - Check that missing values are properly handled
-    - Verify Excel file format and structure
-
-2. **File Not Found Error**
-
-    - Confirm `lung-cancerdata.xlsx` is in the project directory
-    - Check file name spelling and extension
-
-3. **Memory Issues**
-
-    - Reduce dataset replication factor (change from 4 to 2 or 1)
-    - Decrease PCA components (K parameter)
-
-4. **Poor Accuracy**
-    - Adjust neural network parameters
-    - Try different train-test split ratios
-    - Experiment with preprocessing techniques
+-   **matplotlib (≥3.3.0)**: plot library
 
 ## 📊 Expected Output
 
@@ -187,6 +163,9 @@ Number of features after PCA: XX
 Original feature dimensions: XX
 PCA explained variance ratio: X.XXXX
 ```
+<img width="3296" height="1466" alt="confusion_matrices" src="https://github.com/user-attachments/assets/eb173667-b9df-42c9-a323-81007b158482" />
+<img width="4470" height="1466" alt="training_curves" src="https://github.com/user-attachments/assets/c88697d9-22bd-4b81-bfe9-d1215ff29170" />
+
 
 ## 🤝 Contributing
 
@@ -220,5 +199,3 @@ If you encounter any issues or have questions:
 -   [ ] Web interface for easy usage
 
 ---
-
-**Note**: This project is converted from MATLAB implementation to Python for better accessibility and integration with modern ML workflows.
