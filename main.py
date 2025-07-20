@@ -175,9 +175,6 @@ try:
     
     data = pd.read_excel('lung-cancerdata.xlsx', na_values=['?', '', ' ', 'nan', 'NaN', 'null'])
     print(f"Dataset loaded successfully. Shape: {data.shape}")
-    print(f"Column names: {list(data.columns)}")
-    print(f"First few rows:\n{data.head()}")
-    print(f"Data types:\n{data.dtypes}")
     
 except Exception as e:
     print(f"Error loading Excel file: {e}")
@@ -185,7 +182,7 @@ except Exception as e:
     exit()
 
 
-print("\nCleaning data...")
+print("\nCleaning data...")  ##for missed data replacement
 
 
 for col in data.columns:
@@ -211,7 +208,7 @@ if not np.issubdtype(dataset.dtype, np.number):
     dataset = dataset.astype(float)
 
 
-dataset = np.vstack([dataset, dataset, dataset, dataset])
+dataset = np.vstack([dataset, dataset, dataset, dataset])  ##copied to have better traning
 print(f"Dataset shape after replication: {dataset.shape}")
 
 # Shuffle the dataset
@@ -272,7 +269,7 @@ net = MLPClassifier(
     activation='tanh',
     solver='adam',
     learning_rate_init=0.01,
-    max_iter=2000,
+    max_iter=200,
     tol=1e-6,
     random_state=42,
     early_stopping=True,
