@@ -1,4 +1,4 @@
-﻿# ðŸ« Lung Cancer Classification with Neural Networks
+# 🫁 Lung Cancer Classification with Neural Networks
 
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
@@ -6,7 +6,7 @@
 
 A machine learning project that implements an Artificial Neural Network (ANN) to classify lung cancer data, utilizing Principal Component Analysis (PCA) for efficient dimensionality reduction.
 
-## ðŸ“‹ Overview
+## 📋 Overview
 
 This Python-based project focuses on robust data preprocessing and neural network classification. It demonstrates end-to-end ML workflow implementation:
 
@@ -16,19 +16,19 @@ This Python-based project focuses on robust data preprocessing and neural networ
 - **Classification (MLP):** Uses a Multi-Layer Perceptron neural network with a 50-25 hidden layer architecture.
 - **Evaluation:** Calculates and visualizes comprehensive metrics including Accuracy, Precision, Recall, F1-Score, and Confusion Matrices.
 
-## ðŸ—‚ï¸ Project Structure
+## 🗂️ Project Structure
 
 `	ext
-ðŸ“¦ Lung-Cancer-classifier
- â”£ ðŸ“œ main.py                 # Main machine learning pipeline script
- â”£ ðŸ“œ requirements.txt        # Python dependencies
- â”£ ðŸ“œ lung-cancerdata.xlsx    # Target dataset
- â”£ ðŸ–¼ï¸ confusion_matrices.png  # Generated evaluation visualization
- â”£ ðŸ–¼ï¸ training_curves.png     # Generated training loss/MSE curves
- â”— ðŸ“œ README.md               # Project documentation
+📦 Lung-Cancer-classifier
+ ┣ 📜 main.py                 # Main machine learning pipeline script
+ ┣ 📜 requirements.txt        # Python dependencies
+ ┣ 📜 lung-cancerdata.xlsx    # Target dataset
+ ┣ 🖼️ confusion_matrices.png  # Generated evaluation visualization
+ ┣ 🖼️ training_curves.png     # Generated training loss/MSE curves
+ ┗ 📜 README.md               # Project documentation
 `
 
-## ðŸ› ï¸ Quick Start
+## 🛠️ Quick Start
 
 ### Prerequisites
 - Python 3.7+
@@ -55,5 +55,5 @@ This Python-based project focuses on robust data preprocessing and neural networ
    python main.py
    `
 
-### ðŸ“Š Expected Output
+### 📊 Expected Output
 The script will output detailed console metrics (TP, TN, FP, FN, Accuracy, Specificity, etc.) and generate two visualization files (confusion_matrices.png and 	raining_curves.png) demonstrating the model's performance.
