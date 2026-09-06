@@ -1,201 +1,59 @@
-# Lung Cancer Classification using Artificial Neural Network
+﻿# ðŸ« Lung Cancer Classification with Neural Networks
 
-A machine learning project that implements an Artificial Neural Network (ANN) for lung cancer classification using Principal Component Analysis (PCA) for dimensionality reduction.
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![Machine Learning](https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge&logo=scipy&logoColor=white)]()
 
-## 📋 Overview
+A machine learning project that implements an Artificial Neural Network (ANN) to classify lung cancer data, utilizing Principal Component Analysis (PCA) for efficient dimensionality reduction.
 
-This project is a Python-based lung cancer classification, implementing:
+## ðŸ“‹ Overview
 
--   Data preprocessing and cleaning
--   Principal Component Analysis (PCA) for feature reduction
--   Multi-layer Perceptron (MLP) neural network for classification
--   Performance evaluation on training and testing datasets
+This Python-based project focuses on robust data preprocessing and neural network classification. It demonstrates end-to-end ML workflow implementation:
 
-## 🚀 Features
+- **Data Preprocessing:** Handles missing values with mean imputation.
+- **Data Augmentation:** Replicates the dataset 4x and shuffles it to increase training robustness.
+- **Dimensionality Reduction (PCA):** Reduces features to 50 principal components to optimize training.
+- **Classification (MLP):** Uses a Multi-Layer Perceptron neural network with a 50-25 hidden layer architecture.
+- **Evaluation:** Calculates and visualizes comprehensive metrics including Accuracy, Precision, Recall, F1-Score, and Confusion Matrices.
 
--   **Data Augmentation**: Replicates dataset 4 times to increase training samples
--   **Data Shuffling**: Randomizes dataset order for better training
--   **PCA Dimensionality Reduction**: Reduces features to 50 components (or available features)
--   **Missing Value Handling**: Robust imputation using mean strategy
--   **Neural Network**: 3-layer MLP with 50 and 25 hidden neurons
--   **Performance Metrics**: Training and testing accuracy calculation
+## ðŸ—‚ï¸ Project Structure
 
-## 📁 Project Structure
+`	ext
+ðŸ“¦ Lung-Cancer-classifier
+ â”£ ðŸ“œ main.py                 # Main machine learning pipeline script
+ â”£ ðŸ“œ requirements.txt        # Python dependencies
+ â”£ ðŸ“œ lung-cancerdata.xlsx    # Target dataset
+ â”£ ðŸ–¼ï¸ confusion_matrices.png  # Generated evaluation visualization
+ â”£ ðŸ–¼ï¸ training_curves.png     # Generated training loss/MSE curves
+ â”— ðŸ“œ README.md               # Project documentation
+`
 
-```
-LungCancerANN/
-├── main.py                 # Main script
-├── requirements.txt        # Python dependencies
-├── README.md              # Project documentation
-└── lung-cancerdata.xlsx   # Dataset
-```
-
-## 🛠️ Installation
+## ðŸ› ï¸ Quick Start
 
 ### Prerequisites
+- Python 3.7+
+- pip package manager
 
--   Python 3.7 or higher
--   pip package manager
+### Setup Instructions
 
-### Setup
+1. **Clone the repository:**
+   `ash
+   git clone https://github.com/ImanMrd/Lung-Cancer-classifier.git
+   cd Lung-Cancer-classifier
+   `
 
-1. **Clone or download this repository**
+2. **Install dependencies:**
+   `ash
+   pip install -r requirements.txt
+   `
 
-    ```bash
-    git clone https://github.com/ImanMrd/Lung-Cancer-classifier.git
-    cd Lung-Cancer-classifier
-    ```
+3. **Ensure dataset is present:**
+   Verify lung-cancerdata.xlsx is in the root directory.
 
-2. **Create a virtual environment (recommended)**
+4. **Run the model pipeline:**
+   `ash
+   python main.py
+   `
 
-    ```bash
-    python -m venv classifier
-    ```
-
-3. **Activate the virtual environment**
-
-    - Windows:
-        ```bash
-        classifier\Scripts\activate
-        ```
-    - macOS/Linux:
-        ```bash
-        source classifier/bin/activate
-        ```
-
-4. **Install dependencies**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-## 📊 Dataset Requirements
-
-The project expects an Excel file named `lung-cancerdata.xlsx` with:
-
--   Features in all columns except the last one
--   Target labels in the last column
--   Missing values can be represented as '?', empty cells, or NaN
--   Target labels should be binary (typically 1 and 2, where 2 gets converted to 0)
-
-## 🏃‍♂️ Usage
-
-1. **Place your dataset**
-
-    - Ensure `lung-cancerdata.xlsx` is in the project directory
-    - Dataset should contain lung cancer data with appropriate features and labels
-
-2. **Run the classification**
-
-    ```bash
-    python main.py
-    ```
-
-3. **View results**
-   The script will output:
-    - Data loading and preprocessing information
-    - Training progress details
-    - Training accuracy percentage
-    - Testing accuracy percentage
-    - Additional model statistics
-
-## 🔧 Configuration
-
-You can modify these parameters in `main.py`:
-
-```python
-# PCA components (default: 50 or number of available features)
-K = min(50, input_data.shape[1])
-
-# Neural network architecture
-hidden_layer_sizes=(50, 25)  # Two hidden layers with 50 and 25 neurons
-
-# Training parameters
-learning_rate_init=0.01      # Learning rate
-max_iter=2000               # Maximum training iterations
-tol=1e-6                   # Tolerance for stopping criterion
-
-# Data split ratio
-train_ratio = 0.7          # 70% training, 30% testing
-```
-
-## 📈 Model Architecture
-
-The neural network consists of:
-
--   **Input Layer**: Number of features after PCA (≤50)
--   **Hidden Layer 1**: 50 neurons with tanh activation
--   **Hidden Layer 2**: 25 neurons with tanh activation
--   **Output Layer**: 1 neuron for binary classification
-
-## 🔍 Algorithm Steps
-
-1. **Data Loading**: Read Excel dataset with robust missing value handling
-2. **Data Augmentation**: Replicate dataset 4 times
-3. **Data Shuffling**: Randomize sample order
-4. **Preprocessing**: Handle missing values using mean imputation
-5. **Feature Reduction**: Apply PCA to reduce dimensionality
-6. **Normalization**: Scale features to appropriate range
-7. **Train-Test Split**: 70% training, 30% testing
-8. **Model Training**: Train MLP with specified architecture
-9. **Evaluation**: Calculate and display accuracy metrics
-
-## 📋 Dependencies
-
--   **pandas (≥1.3.0)**: Data manipulation and Excel file reading
--   **numpy (≥1.21.0)**: Numerical operations and array handling
--   **scikit-learn (≥1.0.0)**: Machine learning algorithms (PCA, MLP, preprocessing)
--   **openpyxl (≥3.0.0)**: Excel file reading support
--   **matplotlib (≥3.3.0)**: plot library
-
-## 📊 Expected Output
-
-```
-Dataset loaded successfully. Shape: (xxx, yyy)
-Cleaning data...
-Training neural network...
-Training completed successfully!
-The percent of accuracy train is = XX.XX %
-The percent of accuracy test is = XX.XX %
-
-Training set size: XXX
-Test set size: XXX
-Number of features after PCA: XX
-Original feature dimensions: XX
-PCA explained variance ratio: X.XXXX
-```
-<img width="3296" height="1466" alt="confusion_matrices" src="https://github.com/user-attachments/assets/eb173667-b9df-42c9-a323-81007b158482" />
-<img width="4470" height="1466" alt="training_curves" src="https://github.com/user-attachments/assets/c88697d9-22bd-4b81-bfe9-d1215ff29170" />
-
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Commit changes (`git commit -am 'Add new feature'`)
-4. Push to branch (`git push origin feature/improvement`)
-5. Create a Pull Request
-
-## 📝 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-
-1. Check the troubleshooting section above
-2. Review your dataset format and structure
-3. Ensure all dependencies are properly installed
-4. Create an issue in the repository with error details
-
-## 🎯 Future Enhancements
-
--   [ ] Cross-validation implementation
--   [ ] Hyperparameter tuning with GridSearch
--   [ ] Support for multiple file formats (CSV, JSON)
--   [ ] Advanced preprocessing techniques
--   [ ] Model performance visualization
--   [ ] Feature importance analysis
--   [ ] Web interface for easy usage
-
----
+### ðŸ“Š Expected Output
+The script will output detailed console metrics (TP, TN, FP, FN, Accuracy, Specificity, etc.) and generate two visualization files (confusion_matrices.png and 	raining_curves.png) demonstrating the model's performance.
