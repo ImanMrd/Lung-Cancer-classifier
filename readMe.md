@@ -18,7 +18,7 @@ This Python-based project focuses on robust data preprocessing and neural networ
 
 ## 🗂️ Project Structure
 
-`	ext
+```text
 📦 Lung-Cancer-classifier
  ┣ 📜 main.py                 # Main machine learning pipeline script
  ┣ 📜 requirements.txt        # Python dependencies
@@ -26,7 +26,7 @@ This Python-based project focuses on robust data preprocessing and neural networ
  ┣ 🖼️ confusion_matrices.png  # Generated evaluation visualization
  ┣ 🖼️ training_curves.png     # Generated training loss/MSE curves
  ┗ 📜 README.md               # Project documentation
-`
+```
 
 ## 🛠️ Quick Start
 
@@ -37,23 +37,23 @@ This Python-based project focuses on robust data preprocessing and neural networ
 ### Setup Instructions
 
 1. **Clone the repository:**
-   `ash
+   ```bash
    git clone https://github.com/ImanMrd/Lung-Cancer-classifier.git
    cd Lung-Cancer-classifier
-   `
+   ```
 
 2. **Install dependencies:**
-   `ash
+   ```bash
    pip install -r requirements.txt
-   `
+   ```
 
 3. **Ensure dataset is present:**
-   Verify lung-cancerdata.xlsx is in the root directory.
+   Verify `lung-cancerdata.xlsx` is in the root directory.
 
 4. **Run the model pipeline:**
-   `ash
+   ```bash
    python main.py
-   `
+   ```
 
 ### 📊 Expected Output
-The script will output detailed console metrics (TP, TN, FP, FN, Accuracy, Specificity, etc.) and generate two visualization files (confusion_matrices.png and 	raining_curves.png) demonstrating the model's performance.
+The script will output detailed console metrics (TP, TN, FP, FN, Accuracy, Specificity, etc.) and generate two visualization files (`confusion_matrices.png` and `training_curves.png`) demonstrating the model's performance.
