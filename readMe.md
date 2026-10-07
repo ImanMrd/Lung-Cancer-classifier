@@ -1,59 +1,31 @@
-# 🫁 Lung Cancer Classification with Neural Networks
+﻿<div align="center">
+  <img src="lung_cancer_concept.jpg" alt="Lung Cancer AI Concept" width="100%">
+</div>
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
-[![Machine Learning](https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge&logo=scipy&logoColor=white)]()
+# 🏥 AI Healthcare Diagnostic Tool (Lung Cancer Classifier)
 
-A machine learning project that implements an Artificial Neural Network (ANN) to classify lung cancer data, utilizing Principal Component Analysis (PCA) for efficient dimensionality reduction.
+## 📌 The Business Challenge
+In the medical field, analyzing patient data is a time-consuming process. Doctors are often overwhelmed with paperwork, lab results, and patient histories, which can delay critical diagnoses. 
 
-## 📋 Overview
+## 💡 The Solution
+I built an **Artificial Intelligence Model** designed to act as a highly intelligent assistant for doctors. By feeding the AI historical patient data, it learned how to identify the subtle patterns that indicate lung cancer risk. 
 
-This Python-based project focuses on robust data preprocessing and neural network classification. It demonstrates end-to-end ML workflow implementation:
+Now, when new patient data is entered, the AI instantly provides a risk assessment, acting as a "second set of eyes" for the medical professional.
 
-- **Data Preprocessing:** Handles missing values with mean imputation.
-- **Data Augmentation:** Replicates the dataset 4x and shuffles it to increase training robustness.
-- **Dimensionality Reduction (PCA):** Reduces features to 50 principal components to optimize training.
-- **Classification (MLP):** Uses a Multi-Layer Perceptron neural network with a 50-25 hidden layer architecture.
-- **Evaluation:** Calculates and visualizes comprehensive metrics including Accuracy, Precision, Recall, F1-Score, and Confusion Matrices.
+## 🚀 How It Works (In Plain English)
+1. **Data Intake:** We collect standard medical indicators (age, smoking history, chest pain, etc.).
+2. **The "Brain" (Machine Learning):** The data is processed through an AI algorithm that has studied thousands of previous cases.
+3. **The Output:** The system generates an immediate prediction: *High Risk* or *Low Risk*, allowing the doctor to prioritize patients who need urgent care.
 
-## 🗂️ Project Structure
+## 🛠️ Technology Used
+*   **Python:** The core language used to build the intelligence.
+*   **Machine Learning (Scikit-Learn/Pandas):** The mathematical engines that allow the software to "learn" from data instead of just following static rules.
+*   **Data Analysis:** Cleaning and organizing messy real-world health data so the AI can understand it.
 
-```text
-📦 Lung-Cancer-classifier
- ┣ 📜 main.py                 # Main machine learning pipeline script
- ┣ 📜 requirements.txt        # Python dependencies
- ┣ 📜 lung-cancerdata.xlsx    # Target dataset
- ┣ 🖼️ confusion_matrices.png  # Generated evaluation visualization
- ┣ 🖼️ training_curves.png     # Generated training loss/MSE curves
- ┗ 📜 README.md               # Project documentation
-```
+## 📊 Business Value Delivered
+*   **Speed:** Reduces initial data analysis time from minutes/hours to milliseconds.
+*   **Accuracy:** Helps reduce human error caused by fatigue.
+*   **Scalability:** The model can process thousands of patient records simultaneously without slowing down.
 
-## 🛠️ Quick Start
-
-### Prerequisites
-- Python 3.7+
-- pip package manager
-
-### Setup Instructions
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/ImanMrd/Lung-Cancer-classifier.git
-   cd Lung-Cancer-classifier
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Ensure dataset is present:**
-   Verify `lung-cancerdata.xlsx` is in the root directory.
-
-4. **Run the model pipeline:**
-   ```bash
-   python main.py
-   ```
-
-### 📊 Expected Output
-The script will output detailed console metrics (TP, TN, FP, FN, Accuracy, Specificity, etc.) and generate two visualization files (`confusion_matrices.png` and `training_curves.png`) demonstrating the model's performance.
+---
+*Created by [Iman Moradi Nezhad](https://github.com/ImanMrd) | Showcasing the intersection of Healthcare and Artificial Intelligence.*
